@@ -1,0 +1,74 @@
+@import '../../../../_mixin';
+@import '../../../../_variables';
+
+.downloadables {
+  padding: 2rem 0;
+
+  .downloadables__container {
+    @include container;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .downloadables__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      row-gap: 2rem;
+
+      @include sm {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @include lg {
+        grid-template-columns: repeat(6, 1fr);
+      }
+
+      .downloadable__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        cursor: pointer;
+
+        @include sm {
+          width: fit-content;
+        }
+
+        & * {
+          pointer-events: none;
+        }
+
+        &:hover {
+          .downloadable__icon__container {
+            background-color: $primary60;
+          }
+        }
+
+        .downloadable__icon__container {
+          transition: all 0.25s ease-out;
+          padding: 1.5rem;
+          border-radius: 10rem;
+          background-color: $primary80;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+
+          .downloadable__icon {
+            height: 3rem;
+            width: 3rem;
+            min-width: 3rem;
+          }
+        }
+
+        .downloadable__title {
+          font-size: 1.25rem;
+          font-weight: 700;
+          max-width: 7rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

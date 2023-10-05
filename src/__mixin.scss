@@ -1,0 +1,41 @@
+@import './_variables';
+
+@mixin xs {
+  @media screen and (min-width: $breakpoint-xs) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media screen and (min-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+@mixin bg-gradient {
+  background: linear-gradient(to bottom right, $primary, $secondary);
+}
+
+@mixin container {
+  width: 95%;
+  max-width: $container-width;
+  margin: 0 auto;
+}

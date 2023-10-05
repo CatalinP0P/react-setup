@@ -1,0 +1,23 @@
+@import '../../../_mixin';
+@import '../../../_variables';
+
+.form__input__container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  .form__input__title {
+    color: $secondary;
+    opacity: 80%;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .form__input {
+    border: 2px solid $black20;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color: transparent;
+  }
+}

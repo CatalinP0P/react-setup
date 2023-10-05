@@ -1,0 +1,29 @@
+@import '../../../_mixin';
+@import '../../../_variables';
+
+.button {
+  box-sizing: border-box;
+  @include bg-gradient;
+  padding: 0.5em 1em;
+  border-radius: 0.5rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+
+  &.button--small {
+    font-size: 0.75rem;
+  }
+
+  &.button-large {
+    font-size: 1.25rem;
+  }
+
+  &:hover {
+    border: 1px solid $primary;
+    background: none;
+    background-color: transparent;
+    color: $primary;
+    padding: calc(0.5em - 1px) calc(1em - 1px);
+  }
+}

@@ -1,0 +1,74 @@
+@import '../../../_mixin';
+@import '../../../_variables';
+
+.footer {
+  background-color: $primary60;
+  padding: 2rem 0;
+
+  .footer__container {
+    @include container;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-between;
+
+    .footer__copyright {
+      left: 0;
+      bottom: 0;
+      position: absolute;
+    }
+
+    .footer__logo {
+      height: 2.5rem;
+
+      @include sm {
+        font-size: 3.5rem;
+      }
+    }
+
+    .footer__item {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      &.footer__item--right {
+        align-items: end;
+
+        .footer__item__body {
+          align-items: end;
+        }
+      }
+
+      .footer__item__title {
+        font-weight: 800;
+        text-decoration: underline;
+        font-size: 1.25rem;
+
+        @include sm {
+          font-size: 1.5rem;
+        }
+      }
+
+      .footer__item__body {
+        display: flex;
+        font-weight: 600;
+        flex-direction: column;
+        gap: 0.75rem;
+        font-size: 1rem;
+
+        @include sm {
+          font-size: 1.25rem;
+        }
+
+        .footer__item__link {
+          cursor: pointer;
+          transition: all 0.25s ease-out;
+
+          &:hover {
+            opacity: 60%;
+          }
+        }
+      }
+    }
+  }
+}

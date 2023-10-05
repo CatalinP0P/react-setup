@@ -1,0 +1,49 @@
+@import '../../../../_mixin';
+@import '../../../../_variables';
+
+.contact {
+  padding: 2rem 0;
+  background-color: $black5;
+
+  .contact__container {
+    @include container;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .contact__header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+
+      .contact__phone {
+        color: $black60;
+        text-decoration: none;
+
+        span {
+          color: $primary;
+          font-weight: 800;
+        }
+      }
+    }
+
+    .contact__body {
+      display: flex;
+      flex-direction: row;
+      align-items: bottom;
+      gap: 4rem;
+
+      .contact__body__form {
+        width: 100%;
+      }
+
+      .contact__image {
+        display: none;
+
+        @include sm {
+          display: block;
+        }
+      }
+    }
+  }
+}

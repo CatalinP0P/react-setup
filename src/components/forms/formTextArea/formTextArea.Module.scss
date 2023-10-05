@@ -1,0 +1,24 @@
+@import '../../../_mixin';
+@import '../../../_variables';
+
+.form__textarea__container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  .form__textarea__title {
+    color: $secondary;
+    opacity: 80%;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .form__textarea {
+    border: 2px solid $black20;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    min-height: 7rem;
+    background-color: transparent;
+  }
+}
